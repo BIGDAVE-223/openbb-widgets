@@ -1,0 +1,16 @@
+name: openbbscreenerwidget
+
+services: 
+
+  openbb:
+    image: openbbscreener
+    command: uvicorn main:app --host 0.0.0.0 --port 5050
+    env_file:
+    - .env
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run http
+    environment:
+      - TUNNEL_TOKEN=

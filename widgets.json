@@ -1,0 +1,192 @@
+{
+  "screener_table": {
+    "name": "OpenBB Screener",
+    "description": "OpenBB screener that is highly adjustable",
+    "endpoint": "/screener_table",
+    "type": "table",
+    "data": {
+      "dataKey": "results",
+      "table": {
+        "enableCharts": true,
+        "showAll": true,
+        "chartView": {
+          "enabled": true,
+          "chartType": "column"
+        },
+        "columnsDefs": [
+          {
+            "field": "symbol",
+            "headerName": "Symbol",
+            "cellDataType": "text",
+            "width": 100
+          },
+          {
+            "field": "name",
+            "headerName": "Name",
+            "cellDataType": "text",
+            "width": 150
+          },
+          {
+            "field": "market_cap",
+            "headerName": "Market Cap",
+            "cellDataType": "number",
+            "formatterFn": "int",
+            "width": 150
+          },
+          {
+            "field": "sector",
+            "headerName": "Sector",
+            "cellDataType": "text",
+            "width": 150
+          },
+          {
+            "field": "industry",
+            "headerName": "Industry",
+            "cellDataType": "text",
+            "width": 150
+          },
+          {
+            "field": "beta",
+            "headerName": "Beta",
+            "cellDataType": "number",
+            "formatterFn": "none",
+            "width": 100
+          },
+          {
+            "field": "price",
+            "headerName": "Price",
+            "cellDataType": "number",
+            "formatterFn": "none",
+            "width": 100
+          },
+          {
+            "field": "volume",
+            "headerName": "Volume",
+            "cellDataType": "number",
+            "formatterFn": "int",
+            "width": 150
+          },
+          {
+            "field": "exchange",
+            "headerName": "Exchange",
+            "cellDataType": "text",
+            "width": 100
+          },
+          {
+            "field": "country",
+            "headerName": "Country",
+            "cellDataType": "text",
+            "width": 100
+          }
+        ]
+      }
+    },
+    "params": [
+      {
+        "type": "number",
+        "paramName": "volume_min",
+        "value": 1000000,
+        "label": "Minimum Volume",
+        "show": true,
+        "description": "Filter stocks with a minimum trading volume."
+      },
+      {
+        "type": "number",
+        "paramName": "volume_max",
+        "value": null,
+        "label": "Maximum Volume",
+        "show": true,
+        "description": "Filter stocks with a maximum trading volume."
+      },
+      {
+        "type": "number",
+        "paramName": "price_min",
+        "value": 250,
+        "label": "Minimum Price",
+        "show": true,
+        "description": "Filter stocks with a minimum price."
+      },
+      {
+        "type": "number",
+        "paramName": "price_max",
+        "value": null,
+        "label": "Maximum Price",
+        "show": true,
+        "description": "Filter stocks with a maximum price."
+      },
+      {
+        "type": "number",
+        "paramName": "mktcap_min",
+        "value": null,
+        "label": "Minimum Market Cap",
+        "show": true,
+        "description": "Filter stocks with a minimum market capitalization."
+      },
+      {
+        "type": "number",
+        "paramName": "mktcap_max",
+        "value": null,
+        "label": "Maximum Market Cap",
+        "show": true,
+        "description": "Filter stocks with a maximum market capitalization."
+      },
+      {
+        "type": "number",
+        "paramName": "beta_min",
+        "value": null,
+        "label": "Minimum Beta",
+        "show": true,
+        "description": "Filter stocks with a minimum beta value."
+      },
+      {
+        "type": "number",
+        "paramName": "beta_max",
+        "value": null,
+        "label": "Maximum Beta",
+        "show": true,
+        "description": "Filter stocks with a maximum beta value."
+      },
+      {
+        "type": "text",
+        "paramName": "sector",
+        "value": null,
+        "label": "Sector",
+        "show": true,
+        "description": "Filter stocks by sector.",
+        "options": [
+          { "label": "Technology", "value": "technology" },
+          { "label": "Healthcare", "value": "healthcare" },
+          { "label": "Financial Services", "value": "financial_services" },
+          { "label": "Consumer Cyclical", "value": "consumer_cyclical" },
+          { "label": "Energy", "value": "energy" },
+          { "label": "Utilities", "value": "utilities" }
+        ]
+      },
+      {
+        "type": "text",
+        "paramName": "industry",
+        "value": null,
+        "label": "Industry",
+        "show": true,
+        "description": "Filter stocks by industry."
+      },
+      {
+        "type": "text",
+        "paramName": "exchange",
+        "value": "nyse",
+        "label": "Exchange",
+        "show": true,
+        "description": "Filter stocks by exchange.",
+        "options": [
+          { "label": "NYSE", "value": "nyse" },
+          { "label": "NASDAQ", "value": "nasdaq" },
+          { "label": "OTC", "value": "otc" },
+          { "label": "AMEX", "value": "amex" }
+        ]
+      }
+    ],
+    "source": ["OpenBB API"],
+    "refetchInterval": 900000,
+    "staleTime": 300000
+  }
+}
