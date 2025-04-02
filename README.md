@@ -2,6 +2,8 @@
 Custom widgets I created to implement into the openbb workspace as backend widgets
 
 # Screener Widget using fmp Installation Guide
+![Screenshot 2025-04-02 011746](https://github.com/user-attachments/assets/c3dd61fa-af6f-4ed7-acc0-7d0fea8c56b5)
+
 
 ## Installation
 
@@ -55,8 +57,10 @@ make sure you have gone to openbb hub and entered your fmp api token or this wil
 1. Add the URL of your instance into OpenBB under data connectors, backends.
 
 2. Add the widget to a workspace, and you might have to click the three dots in the top right, then go to quick actions and select "Auto-size columns."
+   
+![Screenshot 2025-04-02 011807](https://github.com/user-attachments/assets/d40771ef-8b44-4bfd-8712-da53e893c426)
 
-3. The screener is highly customizable, and you can filter with the parameters at the top.
+4. The screener is highly customizable, and you can filter with the parameters at the top.
 
 Let me know if there are any changes I should make as I am newer to Python, JSON, and OpenBB.
 
