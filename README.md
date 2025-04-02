@@ -31,7 +31,7 @@ make sure you have gone to openbb hub and entered your fmp api token or this wil
 
 ### Option 2: Run in Docker with Cloudflare tunnels to a domain
 
-1. Download the `ScreenerWidgetDocker` folder.
+1. Download the `ScreenerWidget` folder.
 
 2. Create an image from the Dockerfile.
 
