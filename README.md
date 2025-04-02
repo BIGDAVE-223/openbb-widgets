@@ -35,7 +35,7 @@ make sure you have gone to openbb hub and entered your fmp api token or this wil
 
 1. Download the `ScreenerWidget` folder.
 
-2. Create an image from the Dockerfile.
+2. Create an image from the Dockerfile or pull from [bigdave223/openbbscreener:latest](https://hub.docker.com/r/bigdave223/openbbscreener)
 
 3. Run the application using Docker Compose after entering your OpenBB PAT and Cloudflare tunnel token in the `.env`:
 
