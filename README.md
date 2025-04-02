@@ -26,7 +26,7 @@ make sure you have gone to openbb hub and entered your fmp api token or this wil
 4. Run the application:
 
    ```bash
-   uvicorn screener:app --host 0.0.0.0 --port 5050 --env-file .env
+   uvicorn main:app --host 0.0.0.0 --port 5050 --env-file .env
    ```
 
 5. Make sure to enter your OpenBB PAT into the `.env` file.
